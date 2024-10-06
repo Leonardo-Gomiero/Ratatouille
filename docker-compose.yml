@@ -1,0 +1,12 @@
+services:
+  ratatouille:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ratatouille-image
+    container_name: ratatouille-container 
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./src:/app/src
+      - ./pom.xml:/app/pom.xml
